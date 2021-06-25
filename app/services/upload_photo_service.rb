@@ -12,8 +12,8 @@ class UploadPhotoService
 
   def upload_file
     @file_name = SecureRandom.hex(10) + file.original_filename
-    File.open("public/disease/#{file_name}", 'wb') do |file|
-      file.write(file.read)
+    File.open("public/disease/#{file_name}", 'wb') do |f|
+      f.write(file.read)
     end
     true
   end

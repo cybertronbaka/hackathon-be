@@ -6,13 +6,12 @@ class AiLabelParser
   end
 
   def run
-    label, probab = output.split('/')
-    name, disease = label.split('___')
+    output.gsub!(/[\r\n█]/,"")
+    name, disease = output.split('___')
     {
       disease: {
         crop: name.humanize,
-          disease: name.humanize + disease.humanize,
-          probablility: probab
+        disease: name.humanize +" " + disease.humanize
       }
     }
   end

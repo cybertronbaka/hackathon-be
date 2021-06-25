@@ -6,6 +6,6 @@ class AiService
   end
 
   def run
-    exec("python3 #{Rails.root}/plant_detection.py #{path}")
+    `python3 plant_detection.py "#{path}"`
   end
 end
