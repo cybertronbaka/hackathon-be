@@ -1,3 +1,0 @@
-class Treatment < ApplicationRecord
-
-end

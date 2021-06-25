@@ -6,13 +6,12 @@ class AiLabelParser
   end
 
   def run
-    output.gsub!(/[\r\n█]/,'')
+    output.gsub!(/[\r\n█]/, '')
     name, disease = output.split('___')
     {
-      disease: {
-        crop: name.humanize,
-        disease: name.humanize + ' ' + disease.humanize
-      }
+      crop: name.humanize,
+      disease: disease.humanize,
+      disease_label: name.humanize + ' ' + disease.humanize
     }
   end
 end

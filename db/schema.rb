@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_25_102703) do
+ActiveRecord::Schema.define(version: 2021_06_25_171220) do
+
+  create_table "diseases", force: :cascade do |t|
+    t.string "crop"
+    t.string "disease"
+    t.string "description"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "photos", force: :cascade do |t|
     t.string "name"
