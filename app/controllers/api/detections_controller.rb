@@ -1,5 +1,5 @@
 module Api
-  class DetectionsControllers < ApplicationController
+  class DetectionsControllers < ::ApplicationController
     def index
       photo = UploadPhotoService.new(params: params, file: params[:image]).run
       output = AiService.new(path: photo.path).run
