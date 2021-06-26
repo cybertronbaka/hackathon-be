@@ -2,7 +2,11 @@ module Api
   class DetectionsController < ::ApplicationController
     def index
       json = {
-          disease: parsed_label.merge!(video_url: queried_disease&.url, description: queried_disease&.description)
+          disease: parsed_label.merge!(
+            video_url: queried_disease&.url, 
+            description: queried_disease&.description,
+            probablity: queried_disease&.probablity
+          )
       }
       render json: json
     end
