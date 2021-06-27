@@ -7,13 +7,11 @@ class AiLabelParser
 
   def run
     output.gsub!(/[\r\n█]/, '')
-    label, probablity = output.split('/')
-    name, disease = label.split('___')
+    name, disease = output.split('___')
     {
       crop: name.humanize,
       disease: disease.humanize,
-      disease_label: name.humanize + ' ' + disease.humanize,
-      probablity: probablity.to_i
+      disease_label: name.humanize + ' ' + disease.humanize
     }
   end
 end
