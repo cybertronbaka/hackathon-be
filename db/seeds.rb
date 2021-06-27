@@ -17,12 +17,14 @@ diseases = [
   {
     crop: 'Apple',
     disease: 'Black rot',
+    disease_label: 'Cedar apple rust',
     description: "Black rot is a name used for various diseases of cultivated plants caused by fungi or bacteria, producing dark brown discoloration and decay in the leaves of fruit and vegetables",
     url: 'agIwEBm7Zao'
   },
   {
     crop: 'Apple',
     disease: 'Cedar apple rust',
+    disease_label: 'Black rot',
     description: "In virtually any location where apples or crabapples (Malus) and Eastern red-cedar (Juniperus virginiana) coexist, cedar apple rust can be a destructive or disfiguring disease on both the apples and cedars. Quince and hawthorn are the most common host and many species of juniper can substitute for the eastern red cedars. ",
     url: 'xNXVLKP6dkU'
   },

@@ -3,6 +3,7 @@ module Api
     def index
       json = {
         disease: parsed_label.merge!(
+            disease: queried_disease&.disease_label || queried_disease&.disease,
           video_url: queried_disease&.url, 
           description: queried_disease&.description,
           probability: parsed_label.dig(:probability)
